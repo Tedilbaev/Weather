@@ -1,5 +1,6 @@
 package com.example.weather
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -53,7 +54,8 @@ class LoginActivity : AppCompatActivity() {
 
         val successMessage = getString(R.string.welcome_message, login)
         Toast.makeText(this, successMessage, Toast.LENGTH_SHORT).show()
-        tvResult.text = getString(R.string.result_template, login, "*".repeat(password.length))
+        val intent = Intent(this, CityListActivity::class.java)
+        startActivity(intent)
     }
 
     private fun validateInput(login: String, password: String): String? {
