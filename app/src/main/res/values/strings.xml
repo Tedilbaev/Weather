@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Weather</string>
+
+    <string name="login_title">Вход</string>
+    <string name="hint_login">Логин</string>
+    <string name="hint_password">Пароль</string>
+    <string name="btn_login">Войти</string>
+    <string name="btn_switch_to_linear">Переключиться на LinearLayout</string>
+    <string name="btn_switch_to_constraint">Переключиться на ConstraintLayout</string>
+
+    <string name="error_empty_login">Введите логин</string>
+    <string name="error_empty_password">Введите пароль</string>
+    <string name="error_short_password">Пароль слишком короткий (минимум %1$d символа)</string>
+    <string name="welcome_message">Добро пожаловать, %1$s!</string>
+    <string name="result_template">Логин: %1$s\nПароль: %2$s</string>
 </resources>

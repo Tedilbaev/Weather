@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Weather</string>
+
+    <string name="login_title">Login</string>
+    <string name="hint_login">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="btn_login">Sign in</string>
+    <string name="btn_switch_to_linear">Switch to LinearLayout</string>
+    <string name="btn_switch_to_constraint">Switch to ConstraintLayout</string>
+
+    <string name="error_empty_login">Enter your username</string>
+    <string name="error_empty_password">Enter your password</string>
+    <string name="error_short_password">Password is too short (min %1$d characters)</string>
+    <string name="welcome_message">Welcome, %1$s!</string>
+    <string name="result_template">Login: %1$s\nPassword: %2$s</string>
+</resources>

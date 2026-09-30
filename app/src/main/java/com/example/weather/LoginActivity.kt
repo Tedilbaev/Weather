@@ -51,16 +51,16 @@ class LoginActivity : AppCompatActivity() {
             return
         }
 
-        val successMessage = "Добро пожаловать, $login!"
+        val successMessage = getString(R.string.welcome_message, login)
         Toast.makeText(this, successMessage, Toast.LENGTH_SHORT).show()
-        tvResult.text = "Логин: $login\nПароль: ${"*".repeat(password.length)}"
+        tvResult.text = getString(R.string.result_template, login, "*".repeat(password.length))
     }
 
     private fun validateInput(login: String, password: String): String? {
         return when {
-            login.isBlank() -> "Введите логин"
-            password.isBlank() -> "Введите пароль"
-            password.length < MIN_PASSWORD_LENGTH -> "Пароль слишком короткий (минимум $MIN_PASSWORD_LENGTH символа)"
+            login.isBlank() -> getString(R.string.error_empty_login)
+            password.isBlank() -> getString(R.string.error_empty_password)
+            password.length < MIN_PASSWORD_LENGTH -> getString(R.string.error_short_password, MIN_PASSWORD_LENGTH)
             else -> null
         }
     }
