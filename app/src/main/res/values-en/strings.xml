@@ -27,4 +27,16 @@
     <string name="selected_city_template">City selected: %1$s</string>
 
     <string name="btn_confirm_city">Select this city</string>
+
+    <string name="action_details">Details</string>
+    <string name="action_delete">Delete</string>
+    <string name="dialog_delete_title">Delete city?</string>
+    <string name="dialog_delete_message">Are you sure you want to delete %1$s?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="dialog_add_city_title">New city</string>
+    <string name="hint_city_name">Title city</string>
+    <string name="btn_add">Add</string>
+    <string name="cancel">Cancel</string>
+    <string name="btn_add_city">+ Add city</string>
 </resources>

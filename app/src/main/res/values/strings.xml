@@ -26,4 +26,16 @@
     <string name="selected_city_template">Выбран город: %1$s</string>
 
     <string name="btn_confirm_city">Выбрать этот город</string>
+
+    <string name="action_details">Подробнее</string>
+    <string name="action_delete">Удалить</string>
+    <string name="dialog_delete_title">Удалить город?</string>
+    <string name="dialog_delete_message">Вы уверены, что хотите удалить %1$s?</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="dialog_add_city_title">Новый город</string>
+    <string name="hint_city_name">Название города</string>
+    <string name="btn_add">Добавить</string>
+    <string name="cancel">Отмена</string>
+    <string name="btn_add_city">+ Добавить город</string>
 </resources>

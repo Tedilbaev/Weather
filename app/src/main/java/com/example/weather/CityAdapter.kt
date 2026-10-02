@@ -7,8 +7,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class CityAdapter(
-    private val cities: List<City>,
-    private val onCityClick: (City) -> Unit
+    private val cities: MutableList<City>,
+    private val onCityClick: (City) -> Unit,
+    private val onRegisterContextMenu: (View) -> Unit
 ) : RecyclerView.Adapter<CityAdapter.CityViewHolder>() {
 
     class CityViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -24,10 +25,24 @@ class CityAdapter(
     override fun onBindViewHolder(holder: CityViewHolder, position: Int) {
         val city = cities[position]
         holder.tvCityName.text = city.name
+        holder.itemView.tag = city
+
         holder.itemView.setOnClickListener {
             onCityClick(city)
         }
+
+        onRegisterContextMenu(holder.itemView)
     }
 
     override fun getItemCount(): Int = cities.size
+
+    fun addCity(city: City) {
+        cities.add(city)
+        notifyItemInserted(cities.size - 1)
+    }
+
+    fun removeCity(position: Int) {
+        cities.removeAt(position)
+        notifyItemRemoved(position)
+    }
 }
