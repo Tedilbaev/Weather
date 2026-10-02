@@ -22,4 +22,6 @@
     <string name="theme_dark">Тёмная</string>
     <string name="theme_system">Системная</string>
     <string name="menu_settings">Настройки</string>
+
+    <string name="selected_city_template">Выбран город: %1$s</string>
 </resources>

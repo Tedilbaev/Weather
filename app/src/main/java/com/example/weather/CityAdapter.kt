@@ -7,7 +7,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class CityAdapter(
-    private val cities: List<City>
+    private val cities: List<City>,
+    private val onCityClick: (City) -> Unit
 ) : RecyclerView.Adapter<CityAdapter.CityViewHolder>() {
 
     class CityViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -23,6 +24,9 @@ class CityAdapter(
     override fun onBindViewHolder(holder: CityViewHolder, position: Int) {
         val city = cities[position]
         holder.tvCityName.text = city.name
+        holder.itemView.setOnClickListener {
+            onCityClick(city)
+        }
     }
 
     override fun getItemCount(): Int = cities.size

@@ -23,4 +23,6 @@
     <string name="theme_dark">Dark</string>
     <string name="theme_system">System</string>
     <string name="menu_settings">Settings</string>
+
+    <string name="selected_city_template">City selected: %1$s</string>
 </resources>

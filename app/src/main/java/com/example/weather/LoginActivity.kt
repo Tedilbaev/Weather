@@ -9,6 +9,7 @@ import android.widget.ImageButton
 import android.widget.PopupMenu
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
@@ -24,6 +25,9 @@ class LoginActivity : AppCompatActivity() {
         private const val MIN_PASSWORD_LENGTH = 4
         private const val PREFS_NAME = "app_settings"
         private const val KEY_THEME = "theme_mode"
+
+        const val EXTRA_LOGIN = "extra_login"
+        const val EXTRA_SELECTED_CITY = "extra_selected_city"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -117,6 +121,17 @@ class LoginActivity : AppCompatActivity() {
             }
     }
 
+    private val cityListLauncher = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        if (result.resultCode == RESULT_OK) {
+            val selectedCity = result.data?.getStringExtra(EXTRA_SELECTED_CITY)
+            if (selectedCity != null) {
+                findViewById<TextView>(R.id.tvResult).text =
+                    getString(R.string.selected_city_template, selectedCity)
+            }
+        }
+    }
     private fun handleLoginClick(login: String, password: String, tvResult: TextView) {
         val message = validateInput(login, password)
 
@@ -129,7 +144,8 @@ class LoginActivity : AppCompatActivity() {
         val successMessage = getString(R.string.welcome_message, login)
         Toast.makeText(this, successMessage, Toast.LENGTH_SHORT).show()
         val intent = Intent(this, CityListActivity::class.java)
-        startActivity(intent)
+        intent.putExtra(EXTRA_LOGIN, login)
+        cityListLauncher.launch(intent)
     }
 
     private fun validateInput(login: String, password: String): String? {

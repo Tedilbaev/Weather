@@ -1,14 +1,23 @@
 package com.example.weather
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 
 class CityListActivity : AppCompatActivity() {
 
+    private lateinit var adapter: CityAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_city_list)
+
+        val login = intent.getStringExtra(LoginActivity.EXTRA_LOGIN)
+        if (login != null) {
+            Toast.makeText(this, "Пользователь: $login", Toast.LENGTH_SHORT).show()
+        }
 
         val cities = listOf(
             City("Москва"),
@@ -46,7 +55,16 @@ class CityListActivity : AppCompatActivity() {
             City("Астрахань")
         )
 
-        val recyclerView = findViewById<RecyclerView>(R.id.rvCities)
-        recyclerView.adapter = CityAdapter(cities)
+        adapter = CityAdapter(cities) { selectedCity ->
+            returnSelectedCity(selectedCity.name)
+        }
+        findViewById<RecyclerView>(R.id.rvCities).adapter = adapter
+    }
+
+    private fun returnSelectedCity(cityName: String) {
+        val resultIntent = Intent()
+        resultIntent.putExtra(LoginActivity.EXTRA_SELECTED_CITY, cityName)
+        setResult(RESULT_OK, resultIntent)
+        finish()
     }
 }

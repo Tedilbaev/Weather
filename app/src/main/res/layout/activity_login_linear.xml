@@ -54,7 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/button_margin_top"
         android:textSize="@dimen/body_text_size"
-        android:textColor="@color/black"
+        android:textColor="?android:attr/textColorPrimary"
         android:gravity="center_horizontal" />
 
     <ImageButton
