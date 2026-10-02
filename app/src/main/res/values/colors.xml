@@ -7,5 +7,14 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="primary">#0F6CBF</color>
+    <color name="flag_white">#FFFFFF</color>
+    <color name="flag_blue">#0039A6</color>
+    <color name="flag_blue_dark">#002776</color>
+    <color name="flag_red">#D52B1E</color>
+    <color name="flag_red_dark">#A01E14</color>
+    <color name="primary">@color/flag_blue</color>
+    <color name="primary_variant">@color/flag_blue_dark</color>
+    <color name="accent">@color/flag_red</color>
+    <color name="background_dark">#0D1B2A</color>
+    <color name="primary_dark">@color/flag_blue_dark</color>
 </resources>

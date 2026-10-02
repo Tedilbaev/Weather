@@ -5,9 +5,15 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
+import android.widget.PopupMenu
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.os.LocaleListCompat
+import androidx.core.content.edit
 
 
 class LoginActivity : AppCompatActivity() {
@@ -16,6 +22,8 @@ class LoginActivity : AppCompatActivity() {
     companion object {
         private const val TAG = "LoginActivity"
         private const val MIN_PASSWORD_LENGTH = 4
+        private const val PREFS_NAME = "app_settings"
+        private const val KEY_THEME = "theme_mode"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,6 +49,72 @@ class LoginActivity : AppCompatActivity() {
         findViewById<Button>(R.id.btnSwitchLayout).setOnClickListener {
             toggleLayout()
         }
+
+        findViewById<ImageButton>(R.id.btnSettings).setOnClickListener { anchor ->
+            showSettingsMenu(anchor)
+        }
+    }
+
+    private fun showSettingsMenu(anchor: android.view.View) {
+        val popup = PopupMenu(this, anchor)
+        popup.menuInflater.inflate(R.menu.menu_main, popup.menu)
+
+        popup.setOnMenuItemClickListener { item ->
+            when (item.itemId) {
+                R.id.action_language -> {
+                    showLanguageDialog()
+                    true
+                }
+                R.id.action_theme -> {
+                    showThemeDialog()
+                    true
+                }
+                else -> false
+            }
+        }
+
+        popup.show()
+    }
+
+    private fun showLanguageDialog() {
+        val languages = arrayOf("Русский", "English")
+        val codes = arrayOf("ru", "en")
+
+        AlertDialog.Builder(this)
+            .setTitle(R.string.dialog_choose_language)
+            .setItems(languages) { _, which ->
+                val localeList = LocaleListCompat.forLanguageTags(codes[which])
+                AppCompatDelegate.setApplicationLocales(localeList)
+            }
+            .show()
+    }
+
+    private fun showThemeDialog() {
+        val themes = arrayOf(
+            getString(R.string.theme_light),
+            getString(R.string.theme_dark),
+            getString(R.string.theme_system)
+        )
+
+        AlertDialog.Builder(this)
+            .setTitle(R.string.dialog_choose_theme)
+            .setItems(themes) { _, which ->
+                val mode = when (which) {
+                    0 -> AppCompatDelegate.MODE_NIGHT_NO
+                    1 -> AppCompatDelegate.MODE_NIGHT_YES
+                    else -> AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
+                }
+                saveTheme(mode)
+                AppCompatDelegate.setDefaultNightMode(mode)
+            }
+            .show()
+    }
+
+    private fun saveTheme(mode: Int) {
+        getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
+            .edit {
+                putInt(KEY_THEME, mode)
+            }
     }
 
     private fun handleLoginClick(login: String, password: String, tvResult: TextView) {

@@ -14,4 +14,13 @@
     <string name="error_short_password">Password is too short (min %1$d characters)</string>
     <string name="welcome_message">Welcome, %1$s!</string>
     <string name="result_template">Login: %1$s\nPassword: %2$s</string>
+
+    <string name="menu_language">Language</string>
+    <string name="menu_theme">Theme</string>
+    <string name="dialog_choose_language">Choose language</string>
+    <string name="dialog_choose_theme">Choose theme</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="theme_system">System</string>
+    <string name="menu_settings">Settings</string>
 </resources>

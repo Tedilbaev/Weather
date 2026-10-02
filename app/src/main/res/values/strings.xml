@@ -13,4 +13,13 @@
     <string name="error_short_password">Пароль слишком короткий (минимум %1$d символа)</string>
     <string name="welcome_message">Добро пожаловать, %1$s!</string>
     <string name="result_template">Логин: %1$s\nПароль: %2$s</string>
+
+    <string name="menu_language">Язык</string>
+    <string name="menu_theme">Тема</string>
+    <string name="dialog_choose_language">Выберите язык</string>
+    <string name="dialog_choose_theme">Выберите тему</string>
+    <string name="theme_light">Светлая</string>
+    <string name="theme_dark">Тёмная</string>
+    <string name="theme_system">Системная</string>
+    <string name="menu_settings">Настройки</string>
 </resources>

@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="@dimen/title_margin_top"
-        android:textColor="@color/black"/>
+        android:textColor="?android:attr/textColorPrimary"/>
 
     <EditText
         android:id="@+id/etLogin"
@@ -49,7 +49,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="@dimen/button_margin_top"
-        android:background="@color/primary"
+        android:background="@color/flag_blue"
         android:textColor="@color/white"/>
 
     <Button
@@ -57,7 +57,7 @@
         android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/button_margin_top"
-        android:background="@color/primary"
+        android:background="@color/flag_red"
         android:text="@string/btn_switch_to_linear"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
@@ -75,6 +75,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:gravity="center_horizontal"/>
+
+    <ImageButton
+        android:id="@+id/btnSettings"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_settings"
+        android:contentDescription="@string/menu_settings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        app:tint="?attr/iconTintColor" />
 
 
 
