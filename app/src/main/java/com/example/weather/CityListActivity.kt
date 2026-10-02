@@ -2,66 +2,29 @@ package com.example.weather
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.RecyclerView
 
-class CityListActivity : AppCompatActivity() {
-
-    private lateinit var adapter: CityAdapter
+class CityListActivity : AppCompatActivity(), CityListFragment.OnCitySelectedListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_city_list)
 
-        val login = intent.getStringExtra(LoginActivity.EXTRA_LOGIN)
-        if (login != null) {
-            Toast.makeText(this, "Пользователь: $login", Toast.LENGTH_SHORT).show()
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainer, CityListFragment())
+                .commit()
         }
-
-        val cities = listOf(
-            City("Москва"),
-            City("Санкт-Петербург"),
-            City("Новосибирск"),
-            City("Екатеринбург"),
-            City("Казань"),
-            City("Нижний Новгород"),
-            City("Челябинск"),
-            City("Самара"),
-            City("Омск"),
-            City("Ростов-на-Дону"),
-            City("Уфа"),
-            City("Красноярск"),
-            City("Воронеж"),
-            City("Пермь"),
-            City("Волгоград"),
-            City("Краснодар"),
-            City("Саратов"),
-            City("Тюмень"),
-            City("Тольятти"),
-            City("Ижевск"),
-            City("Барнаул"),
-            City("Ульяновск"),
-            City("Иркутск"),
-            City("Хабаровск"),
-            City("Ярославль"),
-            City("Владивосток"),
-            City("Махачкала"),
-            City("Томск"),
-            City("Оренбург"),
-            City("Кемерово"),
-            City("Новокузнецк"),
-            City("Рязань"),
-            City("Астрахань")
-        )
-
-        adapter = CityAdapter(cities) { selectedCity ->
-            returnSelectedCity(selectedCity.name)
-        }
-        findViewById<RecyclerView>(R.id.rvCities).adapter = adapter
     }
 
-    private fun returnSelectedCity(cityName: String) {
+    override fun onCitySelected(city: City) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragmentContainer, CityDetailFragment.newInstance(city.name))
+            .addToBackStack(null)
+            .commit()
+    }
+
+    fun returnSelectedCity(cityName: String) {
         val resultIntent = Intent()
         resultIntent.putExtra(LoginActivity.EXTRA_SELECTED_CITY, cityName)
         setResult(RESULT_OK, resultIntent)

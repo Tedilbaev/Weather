@@ -24,4 +24,6 @@
     <string name="menu_settings">Настройки</string>
 
     <string name="selected_city_template">Выбран город: %1$s</string>
+
+    <string name="btn_confirm_city">Выбрать этот город</string>
 </resources>
