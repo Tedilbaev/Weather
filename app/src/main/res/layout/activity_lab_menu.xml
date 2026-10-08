@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выбор лабораторной работы"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp" />
+
+    <Button
+        android:id="@+id/btnLab1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ЛР 1: Hello World"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnLab2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ЛР 2: Login + Layouts"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnLab3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ЛР 3: События + Жизненный цикл"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnLab4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ЛР 4: Ресурсы (строки, цвета, dimens, en)"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnLab5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ЛР 5: Список городов (RecyclerView)"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnLab6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ЛР 6: Навигация между Activity. Intent"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnLab7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ЛР 7: Жизненный цикл Fragment. "
+        android:layout_marginBottom="12dp" />
+
+    <ImageButton
+        android:id="@+id/btnSettings"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_settings"
+        android:contentDescription="@string/menu_settings"
+        android:layout_gravity="end"
+        android:layout_marginTop="16dp"
+        app:tint="?attr/iconTintColor" />
+
+    <!-- Потом добавишь остальные кнопки -->
+
+</LinearLayout>

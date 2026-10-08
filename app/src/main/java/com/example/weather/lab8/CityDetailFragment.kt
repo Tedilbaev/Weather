@@ -1,4 +1,4 @@
-package com.example.weather
+package com.example.weather.lab8
 
 import android.os.Bundle
 import android.util.Log
@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import com.example.weather.R
 
 class CityDetailFragment : Fragment(R.layout.fragment_city_detail) {
 

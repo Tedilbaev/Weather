@@ -1,0 +1,59 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_title"
+        android:textSize="@dimen/title_text_size"
+        android:layout_marginTop="@dimen/title_margin_top"
+        android:textColor="?android:attr/textColorPrimary" />
+
+    <EditText
+        android:id="@+id/etLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_login"
+        android:layout_marginTop="@dimen/field_margin_top" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_password"
+        android:inputType="textPassword"
+        android:layout_marginTop="@dimen/field_margin_top_small" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_login"
+        android:layout_marginTop="@dimen/button_margin_top"
+        android:background="@color/flag_blue"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btnSwitchLayout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_switch_to_constraint"
+        android:layout_marginTop="@dimen/button_margin_top"
+        android:background="@color/flag_red"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/button_margin_top"
+        android:textSize="@dimen/body_text_size"
+        android:textColor="?android:attr/textColorPrimary"
+        android:gravity="center_horizontal" />
+</LinearLayout>

@@ -1,8 +1,9 @@
-package com.example.weather
+package com.example.weather.lab8
 
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
@@ -15,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.os.LocaleListCompat
 import androidx.core.content.edit
+import com.example.weather.R
 
 
 class LoginActivity : AppCompatActivity() {
@@ -37,7 +39,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun renderScreen() {
-        setContentView(if (useConstraint) R.layout.activity_login else R.layout.activity_login_linear)
+        setContentView(if (useConstraint) R.layout.lab6_activity_login else R.layout.lab6_activity_login_linear)
         bindViews()
     }
 
@@ -59,7 +61,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun showSettingsMenu(anchor: android.view.View) {
+    private fun showSettingsMenu(anchor: View) {
         val popup = PopupMenu(this, anchor)
         popup.menuInflater.inflate(R.menu.menu_main, popup.menu)
 

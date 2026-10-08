@@ -1,8 +1,7 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="24dp"
     android:gravity="center_horizontal">
@@ -13,14 +12,14 @@
         android:text="@string/login_title"
         android:textSize="@dimen/title_text_size"
         android:layout_marginTop="@dimen/title_margin_top"
-        android:textColor="?android:attr/textColorPrimary" />
+        android:textColor="?android:attr/textColorPrimary"/>
 
     <EditText
         android:id="@+id/etLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/hint_login"
-        android:layout_marginTop="@dimen/field_margin_top" />
+        android:layout_marginTop="@dimen/field_margin_top"/>
 
     <EditText
         android:id="@+id/etPassword"
@@ -28,7 +27,7 @@
         android:layout_height="wrap_content"
         android:hint="@string/hint_password"
         android:inputType="textPassword"
-        android:layout_marginTop="@dimen/field_margin_top_small" />
+        android:layout_marginTop="@dimen/field_margin_top_small"/>
 
     <Button
         android:id="@+id/btnLogin"
@@ -36,8 +35,8 @@
         android:layout_height="wrap_content"
         android:text="@string/btn_login"
         android:layout_marginTop="@dimen/button_margin_top"
-        android:background="@color/flag_blue"
-        android:textColor="@color/white" />
+        android:background="@color/primary"
+        android:textColor="@color/white"/>
 
     <Button
         android:id="@+id/btnSwitchLayout"
@@ -45,8 +44,8 @@
         android:layout_height="wrap_content"
         android:text="@string/btn_switch_to_constraint"
         android:layout_marginTop="@dimen/button_margin_top"
-        android:background="@color/flag_red"
-        android:textColor="@color/white" />
+        android:background="@color/primary"
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/tvResult"
@@ -54,17 +53,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/button_margin_top"
         android:textSize="@dimen/body_text_size"
-        android:textColor="?android:attr/textColorPrimary"
-        android:gravity="center_horizontal" />
-
-    <ImageButton
-        android:id="@+id/btnSettings"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:src="@drawable/ic_settings"
-        android:contentDescription="@string/menu_settings"
-        android:layout_gravity="end"
-        android:layout_marginTop="16dp"
-        app:tint="?attr/iconTintColor" />
+        android:textColor="@color/black"
+        android:gravity="center_horizontal"/>
 </LinearLayout>

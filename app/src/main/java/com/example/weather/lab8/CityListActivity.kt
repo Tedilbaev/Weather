@@ -1,8 +1,9 @@
-package com.example.weather
+package com.example.weather.lab8
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.weather.R
 
 class CityListActivity : AppCompatActivity(), CityListFragment.OnCitySelectedListener {
 
