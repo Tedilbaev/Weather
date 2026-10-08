@@ -76,6 +76,18 @@
             android:exported="false"
             android:label="ЛР 7"
             android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".lab8.LoginActivity"
+            android:exported="false"
+            android:label="ЛР 8"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".lab8.CityListActivity"
+            android:exported="false"
+            android:label="ЛР 8"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>

@@ -13,7 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.weather.R
 
-class CityListFragment : Fragment(R.layout.fragment_city_list) {
+class CityListFragment : Fragment(R.layout.lab8_fragment_city_list) {
 
     private lateinit var adapter: CityAdapter
     private val cities = mutableListOf(
@@ -95,7 +95,7 @@ class CityListFragment : Fragment(R.layout.fragment_city_list) {
 
     private fun showAddCityDialog() {
         val dialogView = LayoutInflater.from(requireContext())
-            .inflate(R.layout.dialog_add_city, null)
+            .inflate(R.layout.lab8_dialog_add_city, null)
         val etName = dialogView.findViewById<EditText>(R.id.etNewCityName)
 
         AlertDialog.Builder(requireContext())

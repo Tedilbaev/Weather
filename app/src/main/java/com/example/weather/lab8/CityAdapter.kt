@@ -19,7 +19,7 @@ class CityAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CityViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_city, parent, false)
+            .inflate(R.layout.lab8_item_city, parent, false)
         return CityViewHolder(view)
     }
 

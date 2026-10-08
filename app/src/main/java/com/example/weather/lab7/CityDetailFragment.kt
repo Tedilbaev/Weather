@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.weather.R
 
-class CityDetailFragment : Fragment(R.layout.fragment_city_detail) {
+class CityDetailFragment : Fragment(R.layout.lab8_fragment_city_detail) {
 
     companion object {
         private const val TAG = "CityDetailFragment"

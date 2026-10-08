@@ -52,6 +52,10 @@ class LabMenuActivity : AppCompatActivity() {
             startActivity(Intent(this, com.example.weather.lab7.LoginActivity::class.java))
         }
 
+        findViewById<Button>(R.id.btnLab8).setOnClickListener {
+            startActivity(Intent(this, com.example.weather.lab8.LoginActivity::class.java))
+        }
+
         findViewById<ImageButton>(R.id.btnSettings).setOnClickListener { anchor ->
             showSettingsMenu(anchor)
         }

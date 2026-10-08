@@ -62,7 +62,14 @@
         android:id="@+id/btnLab7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ЛР 7: Жизненный цикл Fragment. "
+        android:text="ЛР 7: Жизненный цикл Fragment"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnLab8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ЛР 8: Options Menu и Context Menu"
         android:layout_marginBottom="12dp" />
 
     <ImageButton

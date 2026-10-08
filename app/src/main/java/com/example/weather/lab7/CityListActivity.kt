@@ -9,7 +9,7 @@ class CityListActivity : AppCompatActivity(), CityListFragment.OnCitySelectedLis
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_city_list)
+        setContentView(R.layout.lab8_activity_city_list)
 
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
