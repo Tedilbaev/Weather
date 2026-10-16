@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lab10_header"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/flag_blue"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/etCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/lab10_hint_city"
+        android:inputType="textCapWords"
+        android:backgroundTint="@color/flag_red"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/etNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/lab10_hint_note"
+        android:gravity="top"
+        android:backgroundTint="@color/flag_red"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnSaveInternal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lab10_btn_save_internal"
+        android:textColor="@color/flag_white"
+        android:backgroundTint="@color/flag_blue"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/btnReadInternal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lab10_btn_read_internal"
+        android:textColor="@color/flag_white"
+        android:backgroundTint="@color/flag_blue"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnSaveExternal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lab10_btn_save_external"
+        android:textColor="@color/flag_white"
+        android:backgroundTint="@color/flag_red"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/btnReadExternal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lab10_btn_read_external"
+        android:textColor="@color/flag_white"
+        android:backgroundTint="@color/flag_red"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/tvOutput"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textSize="15sp"
+        android:textColor="@color/flag_blue_dark"
+        android:padding="12dp"
+        android:background="#E8EEF8" />
+
+</LinearLayout>

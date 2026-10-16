@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
 
     <application
         android:allowBackup="true"
@@ -88,6 +91,34 @@
             android:exported="false"
             android:label="ЛР 8"
             android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".lab9.SettingsActivity"
+            android:exported="false"
+            android:label="ЛР 9" />
+
+        <activity
+            android:name=".lab10.FileStorageActivity"
+            android:exported="false"
+            android:label="ЛР 10" />
+
+        <activity
+            android:name=".lab12.LoginActivity"
+            android:exported="false"
+            android:label="ЛР 12"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".lab12.RegisterActivity"
+            android:exported="false"
+            android:label="ЛР 12"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".lab12.CityListActivity"
+            android:exported="false"
+            android:label="ЛР 12" />
+
     </application>
 
 </manifest>

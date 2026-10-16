@@ -1,76 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="24dp"
     android:gravity="center_horizontal">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+        <View android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:background="@color/flag_white" />
+        <View android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:background="@color/flag_blue" />
+        <View android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:background="@color/flag_red" />
+    </LinearLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Выбор лабораторной работы"
+        android:text="@string/lab_menu_title"
         android:textSize="22sp"
         android:textStyle="bold"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="32dp" />
+        android:textColor="@color/flag_blue"
+        android:layout_marginBottom="24dp" />
 
-    <Button
-        android:id="@+id/btnLab1"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ЛР 1: Hello World"
-        android:layout_marginBottom="12dp" />
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-    <Button
-        android:id="@+id/btnLab2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ЛР 2: Login + Layouts"
-        android:layout_marginBottom="12dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btnLab3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ЛР 3: События + Жизненный цикл"
-        android:layout_marginBottom="12dp" />
+            <Button android:id="@+id/btnLab1" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="@string/lab1_title"
+                android:textColor="@color/flag_white" android:backgroundTint="@color/flag_blue"
+                android:layout_marginBottom="10dp" />
 
-    <Button
-        android:id="@+id/btnLab4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ЛР 4: Ресурсы (строки, цвета, dimens, en)"
-        android:layout_marginBottom="12dp" />
+            <Button android:id="@+id/btnLab2" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="@string/lab2_title"
+                android:textColor="@color/flag_white" android:backgroundTint="@color/flag_blue"
+                android:layout_marginBottom="10dp" />
 
-    <Button
-        android:id="@+id/btnLab5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ЛР 5: Список городов (RecyclerView)"
-        android:layout_marginBottom="12dp" />
+            <Button android:id="@+id/btnLab3" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="@string/lab3_title"
+                android:textColor="@color/flag_white" android:backgroundTint="@color/flag_blue"
+                android:layout_marginBottom="10dp" />
 
-    <Button
-        android:id="@+id/btnLab6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ЛР 6: Навигация между Activity. Intent"
-        android:layout_marginBottom="12dp" />
+            <Button android:id="@+id/btnLab4" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="@string/lab4_title"
+                android:textColor="@color/flag_white" android:backgroundTint="@color/flag_blue"
+                android:layout_marginBottom="10dp" />
 
-    <Button
-        android:id="@+id/btnLab7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ЛР 7: Жизненный цикл Fragment"
-        android:layout_marginBottom="12dp" />
+            <Button android:id="@+id/btnLab5" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="@string/lab5_title"
+                android:textColor="@color/flag_white" android:backgroundTint="@color/flag_blue"
+                android:layout_marginBottom="10dp" />
 
-    <Button
-        android:id="@+id/btnLab8"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ЛР 8: Options Menu и Context Menu"
-        android:layout_marginBottom="12dp" />
+            <Button android:id="@+id/btnLab6" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="@string/lab6_title"
+                android:textColor="@color/flag_white" android:backgroundTint="@color/flag_blue"
+                android:layout_marginBottom="10dp" />
+
+            <Button android:id="@+id/btnLab7" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="@string/lab7_title"
+                android:textColor="@color/flag_white" android:backgroundTint="@color/flag_blue"
+                android:layout_marginBottom="10dp" />
+
+            <Button android:id="@+id/btnLab8" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="@string/lab8_title"
+                android:textColor="@color/flag_white" android:backgroundTint="@color/flag_blue"
+                android:layout_marginBottom="10dp" />
+
+            <Button android:id="@+id/btnLab9" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="@string/lab9_title"
+                android:textColor="@color/flag_white" android:backgroundTint="@color/flag_blue"
+                android:layout_marginBottom="10dp" />
+
+            <Button android:id="@+id/btnLab10" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="@string/lab10_title"
+                android:textColor="@color/flag_white" android:backgroundTint="@color/flag_red"
+                android:layout_marginBottom="10dp" />
+
+            <Button android:id="@+id/btnLab12" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="@string/lab12_title"
+                android:textColor="@color/flag_white" android:backgroundTint="@color/flag_red"
+                android:layout_marginBottom="10dp" />
+
+        </LinearLayout>
+    </ScrollView>
 
     <ImageButton
         android:id="@+id/btnSettings"
@@ -80,9 +105,6 @@
         android:src="@drawable/ic_settings"
         android:contentDescription="@string/menu_settings"
         android:layout_gravity="end"
-        android:layout_marginTop="16dp"
-        app:tint="?attr/iconTintColor" />
-
-    <!-- Потом добавишь остальные кнопки -->
-
+        android:layout_marginTop="8dp"
+        app:tint="@color/flag_blue" />
 </LinearLayout>

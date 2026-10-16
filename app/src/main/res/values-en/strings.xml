@@ -39,4 +39,56 @@
     <string name="btn_add">Add</string>
     <string name="cancel">Cancel</string>
     <string name="btn_add_city">+ Add city</string>
+
+    <string name="lab_menu_title">Select lab work</string>
+    <string name="lab1_title">Lab 1: Hello World</string>
+    <string name="lab2_title">Lab 2: Login + Layouts</string>
+    <string name="lab3_title">Lab 3: Events + Activity lifecycle</string>
+    <string name="lab4_title">Lab 4: Resources (strings, colors, dimens, en)</string>
+    <string name="lab5_title">Lab 5: City list (RecyclerView)</string>
+    <string name="lab6_title">Lab 6: Navigation between Activities. Intent</string>
+    <string name="lab7_title">Lab 7: Fragment lifecycle</string>
+    <string name="lab8_title">Lab 8: Options Menu and Context Menu</string>
+    <string name="lab9_title">Lab 9: SharedPreferences + Settings</string>
+    <string name="lab10_title">Lab 10: Weather notes (files)</string>
+    <string name="lab12_title">Lab 11–12: Database</string>
+
+    <string name="lab9_header">Settings</string>
+    <string name="lab9_notifications">Notifications</string>
+    <string name="lab9_dark_theme">Dark theme</string>
+    <string name="lab9_volume">Volume</string>
+
+    <string name="lab10_header">Weather notes</string>
+    <string name="lab10_hint_city">City</string>
+    <string name="lab10_hint_note">Note / forecast (e.g. +5°, rain)</string>
+    <string name="lab10_btn_save_internal">Save note (internal)</string>
+    <string name="lab10_btn_read_internal">Show saved (internal)</string>
+    <string name="lab10_btn_save_external">Export (external)</string>
+    <string name="lab10_btn_read_external">Read export (external)</string>
+    <string name="lab10_error_empty">Enter city and weather note</string>
+    <string name="lab10_saved_internal">Note saved (internal)</string>
+    <string name="lab10_saved_external">Exported to external storage</string>
+    <string name="lab10_no_notes">No saved notes yet</string>
+    <string name="lab10_no_export">Export file not found</string>
+    <string name="lab10_internal_header">Saved notes (internal):\n\n%1$s</string>
+    <string name="lab10_external_header">Export (external):\n\n%1$s</string>
+    <string name="lab10_note_template">City: %1$s\nDate: %2$s\nForecast/note: %3$s\n---\n</string>
+    <string name="lab10_no_permission">Write permission denied</string>
+    <string name="lab10_external_unavailable">External storage unavailable</string>
+    <string name="lab10_error">Error: %1$s</string>
+    <string name="lab10_read_error">Failed to read export</string>
+
+    <string name="btn_register">Sign up</string>
+    <string name="login_success">Logged in</string>
+    <string name="login_failed">Invalid login or password</string>
+    <string name="register_success">Registration successful</string>
+    <string name="register_failed">Login already taken</string>
+    <string name="register_title">Sign up</string>
+    <string name="hint_password_confirm">Confirm password</string>
+    <string name="btn_back_to_login">Already have an account? Sign in</string>
+    <string name="error_password_mismatch">Passwords do not match</string>
+
+    <string name="lab11_hint_description">Description / weather</string>
+    <string name="lab12_edit_title">Edit city</string>
+    <string name="lab12_save">Save</string>
 </resources>

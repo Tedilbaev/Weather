@@ -38,4 +38,57 @@
     <string name="btn_add">Добавить</string>
     <string name="cancel">Отмена</string>
     <string name="btn_add_city">+ Добавить город</string>
+
+    <string name="lab_menu_title">Выбор лабораторной работы</string>
+    <string name="lab1_title">ЛР 1: Hello World</string>
+    <string name="lab2_title">ЛР 2: Login + Layouts</string>
+    <string name="lab3_title">ЛР 3: События + Жизненный цикл</string>
+    <string name="lab4_title">ЛР 4: Ресурсы (строки, цвета, dimens, en)</string>
+    <string name="lab5_title">ЛР 5: Список городов (RecyclerView)</string>
+    <string name="lab6_title">ЛР 6: Навигация между Activity. Intent</string>
+    <string name="lab7_title">ЛР 7: Жизненный цикл Fragment</string>
+    <string name="lab8_title">ЛР 8: Options Menu и Context Menu</string>
+    <string name="lab9_title">ЛР 9: SharedPreferences + Настройки</string>
+    <string name="lab10_title">ЛР 10: Заметки о погоде (файлы)</string>
+    <string name="lab12_title">ЛР 11–12: База данных</string>
+
+    <string name="lab9_header">Настройки</string>
+    <string name="lab9_notifications">Уведомления</string>
+    <string name="lab9_dark_theme">Тёмная тема</string>
+    <string name="lab9_volume">Громкость</string>
+
+    <string name="lab10_header">Заметки о погоде</string>
+    <string name="lab10_hint_city">Город</string>
+    <string name="lab10_hint_note">Заметка / прогноз (например: +5°, дождь)</string>
+    <string name="lab10_btn_save_internal">Сохранить заметку (internal)</string>
+    <string name="lab10_btn_read_internal">Показать сохранённые (internal)</string>
+    <string name="lab10_btn_save_external">Экспорт (external)</string>
+    <string name="lab10_btn_read_external">Читать экспорт (external)</string>
+    <string name="lab10_error_empty">Укажите город и заметку о погоде</string>
+    <string name="lab10_saved_internal">Заметка сохранена (внутреннее)</string>
+    <string name="lab10_saved_external">Экспорт во внешнее хранилище</string>
+    <string name="lab10_no_notes">Пока нет сохранённых заметок</string>
+    <string name="lab10_no_export">Файл экспорта не найден</string>
+    <string name="lab10_internal_header">Сохранённые заметки (internal):\n\n%1$s</string>
+    <string name="lab10_external_header">Экспорт (external):\n\n%1$s</string>
+    <string name="lab10_note_template">Город: %1$s\nДата: %2$s\nПрогноз/заметка: %3$s\n---\n</string>
+    <string name="lab10_no_permission">Нет разрешения на запись</string>
+    <string name="lab10_external_unavailable">Внешнее хранилище недоступно</string>
+    <string name="lab10_error">Ошибка: %1$s</string>
+    <string name="lab10_read_error">Ошибка чтения экспорта</string>
+
+    <string name="btn_register">Регистрация</string>
+    <string name="login_success">Вход выполнен</string>
+    <string name="login_failed">Неверный логин или пароль</string>
+    <string name="register_success">Регистрация успешна</string>
+    <string name="register_failed">Логин уже занят</string>
+    <string name="register_title">Регистрация</string>
+    <string name="hint_password_confirm">Повторите пароль</string>
+    <string name="btn_back_to_login">Уже есть аккаунт? Войти</string>
+    <string name="error_password_mismatch">Пароли не совпадают</string>
+
+
+    <string name="lab11_hint_description">Описание / погода</string>
+    <string name="lab12_edit_title">Редактировать город</string>
+    <string name="lab12_save">Сохранить</string>
 </resources>
