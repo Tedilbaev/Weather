@@ -32,7 +32,7 @@
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/btn_login"
         android:layout_marginTop="@dimen/button_margin_top"
@@ -41,7 +41,7 @@
 
     <Button
         android:id="@+id/btnRegister"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/btn_register"
         android:layout_marginTop="12dp"
@@ -51,7 +51,7 @@
 
     <Button
         android:id="@+id/btnSwitchLayout"
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/btn_switch_to_constraint"
         android:layout_marginTop="@dimen/button_margin_top"
