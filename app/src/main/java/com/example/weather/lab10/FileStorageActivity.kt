@@ -5,6 +5,7 @@ import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
 import android.os.Environment
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -12,6 +13,7 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.core.view.isVisible
 import com.example.weather.R
 import java.io.File
 import java.text.SimpleDateFormat
@@ -75,6 +77,7 @@ class FileStorageActivity : AppCompatActivity() {
     private fun readInternal() {
         try {
             val text = openFileInput(INTERNAL_FILE).bufferedReader().use { it.readText() }
+            tvOutput.visibility = View.VISIBLE
             tvOutput.text = getString(R.string.lab10_internal_header, text)
         } catch (e: Exception) {
             tvOutput.text = getString(R.string.lab10_no_notes)

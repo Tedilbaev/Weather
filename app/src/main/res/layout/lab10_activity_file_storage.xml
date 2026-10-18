@@ -76,6 +76,7 @@
         android:textSize="15sp"
         android:textColor="@color/flag_blue_dark"
         android:padding="12dp"
-        android:background="#E8EEF8" />
+        android:background="#E8EEF8"
+        android:visibility="invisible"/>
 
 </LinearLayout>

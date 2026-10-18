@@ -41,6 +41,14 @@
         android:layout_marginBottom="24dp" />
 
     <Button
+        android:id="@+id/btnVisiblePassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Показать/скрыть пароль"
+        android:textColor="@color/flag_white"
+        android:backgroundTint="@color/flag_red" />
+
+    <Button
         android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

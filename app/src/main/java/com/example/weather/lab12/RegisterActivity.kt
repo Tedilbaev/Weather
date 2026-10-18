@@ -1,6 +1,7 @@
 package com.example.weather.lab12
 
 import android.os.Bundle
+import android.text.method.PasswordTransformationMethod
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -38,6 +39,10 @@ class RegisterActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.btnBackToLogin).setOnClickListener {
             finish()
+        }
+
+        findViewById<Button>(R.id.btnVisiblePassword).setOnClickListener {
+            etPassword.transformationMethod = PasswordTransformationMethod.getInstance();
         }
     }
 
