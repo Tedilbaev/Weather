@@ -125,6 +125,16 @@
             android:exported="false"
             android:label="ЛР 13" />
 
+        <activity
+            android:name=".lab14.CityWeatherActivity"
+            android:exported="false"
+            android:label="ЛР 14" />
+
+        <activity
+            android:name=".lab15.CityWeatherActivity"
+            android:exported="false"
+            android:label="ЛР 15" />
+
     </application>
 
 </manifest>

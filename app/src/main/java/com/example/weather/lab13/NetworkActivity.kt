@@ -5,6 +5,7 @@ import android.util.Log
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.weather.BuildConfig
 import com.example.weather.R
 import retrofit2.Call
 import retrofit2.Callback
@@ -14,7 +15,8 @@ class NetworkActivity : AppCompatActivity() {
 
     companion object {
         private const val TAG = "Lab13_Weather"
-        private const val API_KEY = "3bd4af208d5783c29a4366e4ad1956a1"
+        private val apiKey: String
+            get() = BuildConfig.OWM_API_KEY
         private const val CITY = "Moscow"
     }
 
@@ -30,7 +32,7 @@ class NetworkActivity : AppCompatActivity() {
     private fun loadWeather() {
         Log.d(TAG, "Запрос погоды: city=$CITY")
 
-        RetrofitClient.api.getWeather(CITY, API_KEY)
+        RetrofitClient.api.getWeather(CITY, apiKey)
             .enqueue(object : Callback<OwmResponse> {
                 override fun onResponse(
                     call: Call<OwmResponse>,

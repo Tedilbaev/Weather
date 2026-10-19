@@ -96,4 +96,14 @@
     <string name="lab13_btn_load">Загрузить погоду</string>
     <string name="lab13_success">Смотри Logcat (Lab13_Weather)</string>
     <string name="lab13_error">Ошибка сети</string>
+
+    <string name="lab14_title">ЛР 14: Погода по городам</string>
+    <string name="lab14_btn_load">Загрузить погоду</string>
+    <string name="lab14_no_cities">Нет городов в базе</string>
+    <string name="lab14_loading">Запросов: %1$d</string>
+    <string name="lab14_done">Загружено: %1$d</string>
+    <string name="lab14_city_error">%1$s: %2$s</string>
+    <string name="lab14_network_error">Сеть: %1$s</string>
+
+    <string name="lab15_title">ЛР 15: Coroutines + ProgressBar</string>
 </resources>
