@@ -14,8 +14,8 @@ class NetworkActivity : AppCompatActivity() {
 
     companion object {
         private const val TAG = "Lab13_Weather"
-        private const val LAT = 55.75  // Москва
-        private const val LON = 37.62
+        private const val API_KEY = "3bd4af208d5783c29a4366e4ad1956a1"
+        private const val CITY = "Moscow"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,41 +28,55 @@ class NetworkActivity : AppCompatActivity() {
     }
 
     private fun loadWeather() {
-        Log.d(TAG, "Запрос погоды: lat=$LAT, lon=$LON")
+        Log.d(TAG, "Запрос погоды: city=$CITY")
 
-        RetrofitClient.api.getCurrentWeather(LAT, LON)
-            .enqueue(object : Callback<WeatherResponse> {
+        RetrofitClient.api.getWeather(CITY, API_KEY)
+            .enqueue(object : Callback<OwmResponse> {
                 override fun onResponse(
-                    call: Call<WeatherResponse>,
-                    response: Response<WeatherResponse>
+                    call: Call<OwmResponse>,
+                    response: Response<OwmResponse>
                 ) {
                     if (!response.isSuccessful) {
-                        Log.e(TAG, "HTTP ${response.code()}")
-                        Toast.makeText(this@NetworkActivity, "HTTP ${response.code()}", Toast.LENGTH_SHORT).show()
+                        Log.e(TAG, "HTTP ${response.code()} ${response.message()}")
+                        Toast.makeText(
+                            this@NetworkActivity,
+                            "HTTP ${response.code()}",
+                            Toast.LENGTH_SHORT
+                        ).show()
                         return
                     }
 
-                    val current = response.body()?.currentWeather
-                    if (current == null) {
-                        Log.w(TAG, "current_weather пустой")
+                    val body = response.body()
+                    if (body == null) {
+                        Log.w(TAG, "Пустой body")
                         return
                     }
 
-                    // главное для ЛР13 — вывод в Log
-                    Log.d(TAG, "----- Погода (Москва) -----")
-                    Log.d(TAG, "Температура: ${current.temperature} °C")
-                    Log.d(TAG, "Ветер: ${current.windSpeed} км/ч")
-                    Log.d(TAG, "Направление: ${current.windDirection}°")
-                    Log.d(TAG, "Код погоды: ${current.weatherCode}")
-                    Log.d(TAG, "Время: ${current.time}")
-                    Log.d(TAG, "---------------------------")
+                    val desc = body.weather.firstOrNull()?.description.orEmpty()
 
-                    Toast.makeText(this@NetworkActivity, R.string.lab13_success, Toast.LENGTH_SHORT).show()
+                    Log.d(TAG, "----- Погода -----")
+                    Log.d(TAG, "Город: ${body.name}")
+                    Log.d(TAG, "Температура: ${body.main.temp} °C")
+                    Log.d(TAG, "Влажность: ${body.main.humidity}%")
+                    Log.d(TAG, "Давление: ${body.main.pressure} гПа")
+                    Log.d(TAG, "Ветер: ${body.wind.speed} м/с")
+                    Log.d(TAG, "Описание: $desc")
+                    Log.d(TAG, "------------------")
+
+                    Toast.makeText(
+                        this@NetworkActivity,
+                        R.string.lab13_success,
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
 
-                override fun onFailure(call: Call<WeatherResponse>, t: Throwable) {
+                override fun onFailure(call: Call<OwmResponse>, t: Throwable) {
                     Log.e(TAG, "Ошибка сети: ${t.message}", t)
-                    Toast.makeText(this@NetworkActivity, R.string.lab13_error, Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        this@NetworkActivity,
+                        R.string.lab13_error,
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             })
     }
