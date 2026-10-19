@@ -91,4 +91,9 @@
     <string name="lab11_hint_description">Description / weather</string>
     <string name="lab12_edit_title">Edit city</string>
     <string name="lab12_save">Save</string>
+
+    <string name="lab13_title">Lab 13: Weather (Retrofit)</string>
+    <string name="lab13_btn_load">Load weather</string>
+    <string name="lab13_success">Look Logcat (Lab13_Weather)</string>
+    <string name="lab13_error">Error network</string>
 </resources>

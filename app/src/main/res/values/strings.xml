@@ -91,4 +91,9 @@
     <string name="lab11_hint_description">Описание / погода</string>
     <string name="lab12_edit_title">Редактировать город</string>
     <string name="lab12_save">Сохранить</string>
+
+    <string name="lab13_title">ЛР 13: Погода (Retrofit)</string>
+    <string name="lab13_btn_load">Загрузить погоду</string>
+    <string name="lab13_success">Смотри Logcat (Lab13_Weather)</string>
+    <string name="lab13_error">Ошибка сети</string>
 </resources>

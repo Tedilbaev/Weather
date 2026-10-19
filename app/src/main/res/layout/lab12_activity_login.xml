@@ -19,42 +19,49 @@
         android:layout_marginTop="@dimen/title_margin_top"
         android:textColor="?android:attr/textColorPrimary"/>
 
-    <EditText
-        android:id="@+id/etLogin"
-        android:layout_width="0dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilLogin"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/hint_login"
+        app:boxBackgroundMode="outline"
         app:layout_constraintTop_toBottomOf="@id/tvTitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="@dimen/field_margin_top"/>
+        android:layout_marginTop="@dimen/field_margin_top">
 
-    <EditText
-        android:id="@+id/etPassword"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="@string/hint_password"
-        android:inputType="textPassword"
-        app:layout_constraintTop_toBottomOf="@id/etLogin"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="@dimen/field_margin_top_small"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/btnVisiblePassword"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Показать/скрыть пароль"
-        app:layout_constraintTop_toBottomOf="@id/etPassword"
-        android:textColor="@color/flag_white"
-        android:backgroundTint="@color/flag_red" />
+        android:hint="@string/hint_password"
+        app:endIconMode="password_toggle"
+        app:boxBackgroundMode="outline"
+        app:layout_constraintTop_toBottomOf="@id/tilLogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/field_margin_top_small">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/btn_login"
-        app:layout_constraintTop_toBottomOf="@id/btnVisiblePassword"
+        app:layout_constraintTop_toBottomOf="@id/tilPassword"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="@dimen/button_margin_top"

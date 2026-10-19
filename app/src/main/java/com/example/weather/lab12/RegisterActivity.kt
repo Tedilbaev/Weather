@@ -40,10 +40,6 @@ class RegisterActivity : AppCompatActivity() {
         findViewById<Button>(R.id.btnBackToLogin).setOnClickListener {
             finish()
         }
-
-        findViewById<Button>(R.id.btnVisiblePassword).setOnClickListener {
-            etPassword.transformationMethod = PasswordTransformationMethod.getInstance();
-        }
     }
 
     private fun handleRegister(

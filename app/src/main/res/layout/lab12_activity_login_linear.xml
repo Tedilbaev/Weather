@@ -15,28 +15,36 @@
         android:layout_marginTop="@dimen/title_margin_top"
         android:textColor="?android:attr/textColorPrimary" />
 
-    <EditText
-        android:id="@+id/etLogin"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/hint_login"
-        android:layout_marginTop="@dimen/field_margin_top" />
+        app:boxBackgroundMode="outline"
+        android:layout_marginTop="@dimen/field_margin_top">
 
-    <EditText
-        android:id="@+id/etPassword"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/hint_password"
-        android:inputType="textPassword"
-        android:layout_marginTop="@dimen/field_margin_top_small" />
+        app:endIconMode="password_toggle"
+        app:boxBackgroundMode="outline"
+        android:layout_marginTop="@dimen/field_margin_top_small">
 
-    <Button
-        android:id="@+id/btnVisiblePassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Показать/скрыть пароль"
-        android:textColor="@color/flag_white"
-        android:backgroundTint="@color/flag_red" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btnLogin"

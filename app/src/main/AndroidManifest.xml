@@ -4,6 +4,7 @@
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -118,6 +119,11 @@
             android:name=".lab12.CityListActivity"
             android:exported="false"
             android:label="ЛР 12" />
+
+        <activity
+            android:name=".lab13.NetworkActivity"
+            android:exported="false"
+            android:label="ЛР 13" />
 
     </application>
 

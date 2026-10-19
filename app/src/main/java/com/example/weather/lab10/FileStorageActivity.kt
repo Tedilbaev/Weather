@@ -75,9 +75,9 @@ class FileStorageActivity : AppCompatActivity() {
     }
 
     private fun readInternal() {
+        tvOutput.visibility = View.VISIBLE
         try {
             val text = openFileInput(INTERNAL_FILE).bufferedReader().use { it.readText() }
-            tvOutput.visibility = View.VISIBLE
             tvOutput.text = getString(R.string.lab10_internal_header, text)
         } catch (e: Exception) {
             tvOutput.text = getString(R.string.lab10_no_notes)
@@ -119,6 +119,7 @@ class FileStorageActivity : AppCompatActivity() {
     }
 
     private fun readExternal() {
+        tvOutput.visibility = View.VISIBLE
         try {
             val file = getExportFile()
             if (file == null || !file.exists()) {
