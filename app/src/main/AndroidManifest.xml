@@ -143,6 +143,12 @@
             android:exported="false"
             android:label="ЛР 16" />
 
+        <activity
+            android:name=".lab17.LoginActivity"
+            android:exported="false"
+            android:label="ЛР 17"
+            android:windowSoftInputMode="adjustResize" />
+
     </application>
 
 </manifest>

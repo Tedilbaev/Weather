@@ -53,6 +53,7 @@ android {
 dependencies {
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.fragment.ktx)
+    implementation(libs.androidx.junit.ktx)
     implementation(libs.androidx.recyclerview)
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.appcompat)
