@@ -3,6 +3,7 @@ package com.example.weather.lab16
 import android.Manifest
 import android.content.pm.PackageManager
 import android.os.Bundle
+import android.widget.Button
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
@@ -35,13 +36,18 @@ class MapActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         // ключ — до initialize
-        MapKitFactory.setApiKey(BuildConfig.MAPKIT_API_KEY)
         MapKitFactory.initialize(this)
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.lab16_activity_map)
 
         mapView = findViewById(R.id.mapview)
+
+        findViewById<Button>(R.id.btnZoomIn).setOnClickListener {
+            changeZoom(1f)
+        }
+        findViewById<Button>(R.id.btnZoomOut).setOnClickListener {
+            changeZoom(-1f)
+        }
 
         // стартовая камера (Москва), пока нет GPS
         mapView.mapWindow.map.move(
@@ -53,6 +59,20 @@ class MapActivity : AppCompatActivity() {
         }
 
         requestLocationAndShow()
+    }
+
+    private fun changeZoom(delta: Float) {
+        val map = mapView.mapWindow.map
+        val current = map.cameraPosition
+        val newZoom = (current.zoom + delta).coerceIn(2f, 20f)
+        map.move(
+            CameraPosition(
+                current.target,
+                newZoom,
+                current.azimuth,
+                current.tilt
+            )
+        )
     }
 
     private fun requestLocationAndShow() {

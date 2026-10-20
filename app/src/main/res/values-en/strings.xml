@@ -111,4 +111,6 @@
     <string name="lab16_my_location">My location</string>
     <string name="lab16_permission_denied">No access to geolocation</string>
     <string name="lab16_location_on">Geolocation enabled</string>
+    <string name="zoom_in">+</string>
+    <string name="zoom_out">−</string>
 </resources>
