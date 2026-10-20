@@ -13,6 +13,7 @@ val localProperties = Properties().apply {
     }
 }
 val owmApiKey: String = localProperties.getProperty("OWM_API_KEY") ?: ""
+val mapkitApiKey: String = localProperties.getProperty("MAPKIT_API_KEY") ?: ""
 
 android {
     namespace = "com.example.weather"
@@ -22,13 +23,14 @@ android {
 
     defaultConfig {
         applicationId = "com.example.weather"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 37
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         buildConfigField("String", "OWM_API_KEY", "\"$owmApiKey\"")
+        buildConfigField("String", "MAPKIT_API_KEY", "\"$mapkitApiKey\"")
     }
 
     buildTypes {
@@ -65,6 +67,7 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
     implementation(libs.androidx.lifecycle.runtime.ktx.v270)
+    implementation(libs.maps.mobile)
     testImplementation(libs.junit)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)

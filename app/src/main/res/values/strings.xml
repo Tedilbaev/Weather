@@ -106,4 +106,9 @@
     <string name="lab14_network_error">Сеть: %1$s</string>
 
     <string name="lab15_title">ЛР 15: Coroutines + ProgressBar</string>
+
+    <string name="lab16_title">ЛР 16: Карта (Yandex MapKit)</string>
+    <string name="lab16_my_location">Моё местоположение</string>
+    <string name="lab16_permission_denied">Нет доступа к геолокации</string>
+    <string name="lab16_location_on">Геолокация включена</string>
 </resources>

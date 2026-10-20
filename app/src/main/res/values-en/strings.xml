@@ -106,4 +106,9 @@
     <string name="lab14_network_error">Network: %1$s</string>
 
     <string name="lab15_title">Lab 15: Coroutines + ProgressBar</string>
+
+    <string name="lab16_title">Lab 16: Map (Yandex MapKit)</string>
+    <string name="lab16_my_location">My location</string>
+    <string name="lab16_permission_denied">No access to geolocation</string>
+    <string name="lab16_location_on">Geolocation enabled</string>
 </resources>
