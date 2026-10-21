@@ -149,23 +149,6 @@
             android:label="ЛР 17"
             android:windowSoftInputMode="adjustResize" />
 
-        <activity
-            android:name=".lab19.presentation.LoginActivity"
-            android:exported="false"
-            android:label="ЛР 19"
-            android:windowSoftInputMode="adjustResize" />
-
-        <activity
-            android:name=".lab19.presentation.RegisterActivity"
-            android:exported="false"
-            android:label="ЛР 19"
-            android:windowSoftInputMode="adjustResize" />
-
-        <activity
-            android:name=".lab19.presentation.CityListActivity"
-            android:exported="false"
-            android:label="ЛР 19" />
-
     </application>
 
 </manifest>

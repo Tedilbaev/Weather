@@ -108,14 +108,6 @@
     <string name="lab15_title">ЛР 15: Coroutines + ProgressBar</string>
 
     <string name="lab16_title">ЛР 16: Карта (Yandex MapKit)</string>
-    <string name="lab19_title">ЛР 19: MVVM и SQLite</string>
-    <string name="lab19_login_title">Авторизация ЛР 19</string>
-    <string name="lab19_register_title">Регистрация ЛР 19</string>
-    <string name="lab19_architecture_note">Данные загружаются через ViewModel и Repository. Нажмите на город для редактирования или удерживайте для удаления.</string>
-    <string name="lab19_add_city">Добавить город</string>
-    <string name="lab19_add_title">Новый город</string>
-    <string name="lab19_edit_title">Редактировать город</string>
-    <string name="lab19_save">Сохранить</string>
     <string name="lab16_my_location">Моё местоположение</string>
     <string name="lab16_permission_denied">Нет доступа к геолокации</string>
     <string name="lab16_location_on">Геолокация включена</string>

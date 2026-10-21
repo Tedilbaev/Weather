@@ -114,11 +114,6 @@
                 android:textColor="@color/flag_white" android:backgroundTint="@color/flag_red"
                 android:layout_marginBottom="10dp" />
 
-            <Button android:id="@+id/btnLab19" android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:text="@string/lab19_title"
-                android:textColor="@color/flag_white" android:backgroundTint="@color/flag_red"
-                android:layout_marginBottom="10dp" />
-
         </LinearLayout>
     </ScrollView>
 
